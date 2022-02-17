@@ -2,9 +2,8 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="bg-purple-600 w-full left-0 top-0 fixed flex justify-between items-center z-20 h-[74px]">
-      <div className="text-white font-bold text-2xl pl-5">INFO HARGA</div>
-      <div className="text-white font-bold text-2xl pr-5">Profile</div>
+    <header className="bg-gray-200 shadow-md w-full top-0 fixed flex justify-end items-center z-10 ">
+      <div className="text-gray-500 font-bold text-2xl p-5">Profile</div>
     </header>
   );
 };

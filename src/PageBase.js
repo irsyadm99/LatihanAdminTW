@@ -4,11 +4,13 @@ import Sidebar from "./Sidebar";
 
 const PageBase = ({ children }) => {
   return (
-    <>
-      <Header />
+    <div className="flex w-full flex-row">
       <Sidebar />
-      <main className="ml-48 pt-20 pb-10 pl-10 pr-10">{children}</main>
-    </>
+      <div className="flex flex-col">
+        <Header />
+        <div className="ml-52 p-4 mt-20 w-full">{children}</div>
+      </div>
+    </div>
   );
 };
 

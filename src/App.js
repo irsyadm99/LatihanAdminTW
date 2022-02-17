@@ -1,5 +1,7 @@
 import PageBase from "./PageBase";
 import { Route, Routes } from "react-router-dom";
+import Sidebar from "./Sidebar";
+import Header from "./Header";
 
 function Home() {
   return (
@@ -15,24 +17,25 @@ function Harga() {
     </div>
   );
 }
+function Komoditas() {
+  return (
+    <div>
+      <h2 className="text-2xl font-bold p-5">Komoditas</h2>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <>
+    <div>
       <PageBase>
         <Routes>
-          <Route exact path="/" element={Home} />
-          <Route exact path="/harga" element={Harga} />
-          <Route
-            exact
-            path="/komoditas"
-            render={() => (
-              <h1 className="text-2xl font-bold p-5">hello Komoditas</h1>
-            )}
-          />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/harga" element={<Harga />} />
+          <Route exact path="/komoditas" element={<Komoditas />} />
         </Routes>
       </PageBase>
-    </>
+    </div>
   );
 }
 
